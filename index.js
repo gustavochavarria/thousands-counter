@@ -1,29 +1,14 @@
-const formaters = {};
-
-const numberFormat = (number, digits) => {
-    if(!formaters[digits]) {
-        formaters[digits] = new Intl.NumberFormat('en-US', { maximumFractionDigits: digits});
-    }
-
-    return formaters[digits].format(number);
-}
-
 const oneThousand = 1000;
-const oneMillion = oneThousand * oneThousand;
-const oneBillion = oneThousand * oneMillion; // billion US = thousands of millions
+const oneMillion = Math.pow(1000,2);
+const oneBillion = Math.pow(1000,3); // billion US = thousands of millions
 
-export const toAbr = (num, digits) => {
-    if(isNaN(num)) {
+export const toAbr = (number, digits) => {
+    if(isNaN(number) || number < 0) {
         return 0;
     }
 
-    let abr = 0;
+    let abr = number;
     let symbol = '';
-    const number = Math.abs(num);
-
-    if(number < 1000) {
-        abr = number;
-    }
 
     if(number >= 1000 && number < oneMillion) {
         abr = number/oneThousand;
@@ -40,8 +25,8 @@ export const toAbr = (num, digits) => {
         symbol = 'B';
     }
 
-    return `${numberFormat(abr, digits)}${symbol}`;
+    return `${parseFloat(abr).toFixed(digits)}${symbol}`;
 }
 
 //Acept negative 
-//toAbrWithSignal 
+//export const toAbrWithSignal = () => {}
