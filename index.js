@@ -7,6 +7,10 @@ export const toAbr = (number, digits) => {
         return 0;
     }
 
+    if(number < 1000) {
+        return number;
+    }
+
     let abr = number;
     let symbol = '';
 
