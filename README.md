@@ -13,7 +13,7 @@ Using npm:
 
 ## Use
 
-You can convert numbers into Abreviated expression:
+You can convert numbers into Abbreviated expression:
 
 1000 > 1k <br/>
 2800 > 2.8k <br/>
@@ -21,7 +21,7 @@ You can convert numbers into Abreviated expression:
 1000000 > 1M <br/>
 
 ```
-//to Abreviation
+//to Abbreviation
 toAbr(number, decimals)
 ```
 
