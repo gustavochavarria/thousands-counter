@@ -1,6 +1,6 @@
 {
   "name": "thousands-counter",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "convert thousands of number to miles representation (k, M)",
   "main": "index.js",
   "scripts": {

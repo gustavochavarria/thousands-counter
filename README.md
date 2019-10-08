@@ -5,7 +5,8 @@ Counter of people for followers, likes, post and others stats on Social Networks
 ## Install
 
 Using yarn:
-``` yarn add thousands-counter```
+
+``` yarn add thousands-counter ```
 
 Using npm:
 
