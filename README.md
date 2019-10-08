@@ -1,37 +1,38 @@
 # thousands-counter
-Counter of people for followers, likes, post and others stats on Social Networks (Like Instagram, Facebook, etc)
+Thousand counters it's a package that allows you to convert the number of followers, likes, post and other statistics on social networks (such as Instagram, Facebook, etc.), in abbreviated expressions 👥👍❤️
 
+### For example
+You can convert numbers into abreviated expression like this:
 
-## Install
+1000 ➡️ 1k <br/>
+2800 ➡️ 2.8k <br/>
+99800 ➡️ 99.8k <br/>
+1000000 ➡️ 1M <br/>
 
-Using yarn:
-``` yarn add thousands-counter```
+## Installation
+The package is available as an [npm package](https://www.npmjs.com/package/thousands-counter).
+To install the package run:
 
-Using npm:
+```bash
+npm install thousands-counter
+# or with yarn
+yarn add thousands-counter
+```
 
-``` npm i thousands-counter ```
-
-## Use
-
-You can convert numbers into Abreviated expression:
-
-1000 > 1k <br/>
-2800 > 2.8k <br/>
-99800 > 99.8k <br/>
-1000000 > 1M <br/>
-
+## Usage 
 ```
 //to Abreviation
 toAbr(number, decimals)
 ```
 
-## Example 
-
-```
+```js
 import { toAbr } from 'thousands-counter';
 
 const counter = toAbr(1580, 2);
+
 console.log('Counter: ', counter);
 // Counter: 1.58k
 ```
 
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
