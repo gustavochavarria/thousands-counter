@@ -1,7 +1,7 @@
 {
   "name": "thousands-counter",
   "version": "1.0.3",
-  "description": "convert thousands of number to miles representation (k, M)",
+  "description": "convert thousands of number to miles representation (K, M)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,5 +24,12 @@
   "bugs": {
     "url": "https://github.com/gustavochavarria/thousands-counter/issues"
   },
-  "homepage": "https://github.com/gustavochavarria/thousands-counter#readme"
+  "homepage": "https://github.com/gustavochavarria/thousands-counter#readme",
+  "devDependencies": {
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true
+  }
 }
