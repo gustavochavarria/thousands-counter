@@ -21,7 +21,7 @@ yarn add thousands-counter
 
 ## Usage 
 ```
-//to Abreviation
+//to Abbreviation
 toAbr(number, decimals)
 ```
 
