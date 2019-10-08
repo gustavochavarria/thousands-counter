@@ -4,10 +4,10 @@ Thousand counters it's a package that allows you to convert the number of follow
 ### For example
 You can convert numbers into abreviated expression like this:
 
-1000 ➡️ 1k <br/>
-2800 ➡️ 2.8k <br/>
-99800 ➡️ 99.8k <br/>
-1000000 ➡️ 1M <br/>
+1,000       ➡️ 1K <br/>
+2,800       ➡️ 2.8K <br/>
+99,800      ➡️ 99.8K <br/>
+1,000,000   ➡️ 1M <br/>
 
 ## Installation
 The package is available as an [npm package](https://www.npmjs.com/package/thousands-counter).
