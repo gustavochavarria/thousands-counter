@@ -1,25 +1,27 @@
-const oneThousand = 1000
-const oneMillion = 1000 ** 2
-const oneBillion = 1000 ** 3 // Billion US = thousands of millions
-
 export const toAbr = (number, digits) => {
-  let abr = number
+
+  if (isNaN(number)) {
+    return 0
+  }
+
+  let absNumber = Math.abs(number)
+  let abr = absNumber
+  let sign = Math.sign(number) === -1 || Math.sign(number) === -0 ? -1 : 1;
+
   let symbol = ''
   const symbolList = ['K', 'M', 'B']
 
-  if (isNaN(number) || number < 0) {
-    return 0
-  }
+
 
   for (let i = symbolList.length - 1; i >= 0; i--) {
     const reference = 1000 ** parseInt(i + 1)
 
-    if (number >= reference) {
-      abr = number / reference
+    if (absNumber >= reference) {
+      abr = absNumber / reference
       symbol = symbolList[i]
       break
     }
   }
 
-  return number < 1000 ? number : `${parseFloat(abr).toFixed(digits)}${symbol}`
+  return absNumber < 1000 ? sign * number : `${parseFloat((abr*sign)).toFixed(digits)}${symbol}`
 }
