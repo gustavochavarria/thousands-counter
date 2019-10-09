@@ -28,6 +28,7 @@ You can convert numbers into abreviated expression like this:
   </tr>
 </table>
 
+
 ## Installation
 The package is available as an [npm package](https://www.npmjs.com/package/thousands-counter).
 To install the package run:
@@ -46,14 +47,14 @@ tc(number, decimalsAllowed)
 ```js
 import tc from 'thousands-counter';
 
-const default = tc(1580);
-const counter = tc(1580, 2);
+console.log('Default: ', tc(1580));
+// Default: 1.5K
 
-console.log('Default: ', default);
-// Default: 1.5k
+console.log('Default: ', tc(1580, 0));
+// Default: 1K
 
-console.log('Counter: ', counter);
-// Counter: 1.58k
+console.log('Counter: ', tc(1580, 2));
+// Counter: 1.58K
 ```
 
 ## Usage v1.0.0
