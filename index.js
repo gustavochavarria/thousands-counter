@@ -1,27 +1,32 @@
-export const toAbr = (number, digits) => {
+const SYMBOL_LIST = ['', 'K', 'M', 'B'];
 
+/**
+ * Convert number into human numbers
+ *
+ * @param {Float} number
+ * @param {Int} digits
+ */
+const toAbr = (number, digits) => {
   if (isNaN(number)) {
-    return 0
+    return 0;
   }
 
-  let absNumber = Math.abs(number)
-  let abr = absNumber
-  let sign = Math.sign(number) === -1 || Math.sign(number) === -0 ? -1 : 1;
+  const absNumber = Math.abs(number);
+  const sign = [0, 1].includes(Math.sign(number)) ? 1 : -1;
 
-  let symbol = ''
-  const symbolList = ['K', 'M', 'B']
+  let abr = 0;
+  let symbol = '';
 
-
-
-  for (let i = symbolList.length - 1; i >= 0; i--) {
-    const reference = 1000 ** parseInt(i + 1)
+  for (let i = 0; i <= SYMBOL_LIST.length; i++) {
+    const reference = 1000 ** parseInt(i, 10);
 
     if (absNumber >= reference) {
-      abr = absNumber / reference
-      symbol = symbolList[i]
-      break
+      abr = absNumber / reference;
+      symbol = SYMBOL_LIST[i];
     }
   }
 
-  return absNumber < 1000 ? sign * number : `${parseFloat((abr*sign)).toFixed(digits)}${symbol}`
-}
+  return `${parseFloat(abr * sign).toFixed(digits)}${symbol}`;
+};
+
+export { toAbr as default };
