@@ -7,10 +7,10 @@ All notable changes to this project will be documented in this file.
 ### Added
 - Test
 - Allow negative numbers
+- Default export (import tc from 'thousands-counter')
 
 ### Changed
-- Change Export var to Export Default
-
+- Change Export var to Export Default.
 
 ## [1.0.0] - 2019-10-01
 

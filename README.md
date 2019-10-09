@@ -4,10 +4,29 @@ Thousand counters it's a package that allows you to convert the number of follow
 ### For example
 You can convert numbers into abreviated expression like this:
 
-1,000       ➡️ 1K <br/>
-2,800       ➡️ 2.8K <br/>
-99,800      ➡️ 99.8K <br/>
-1,000,000   ➡️ 1M <br/>
+
+<table>
+  <tr>
+    <td>1,000</td>
+    <td>➡️</td>
+    <td>1K</td>
+  </tr>
+  <tr>
+    <td>2,800</td>
+    <td>➡️</td>
+    <td>2.8K</td>
+  </tr>
+  <tr>
+    <td>99,800 </td>
+    <td>➡️</td>
+    <td>99.8K</td>
+  </tr>
+  <tr>
+    <td>1,000,000</td>
+    <td>➡️</td>
+    <td>1M</td>
+  </tr>
+</table>
 
 ## Installation
 The package is available as an [npm package](https://www.npmjs.com/package/thousands-counter).
@@ -19,9 +38,26 @@ npm install thousands-counter
 yarn add thousands-counter
 ```
 
-## Usage 
+## Usage v1.1.0
 ```
-//to Abbreviation
+tc(number, decimalsAllowed)
+```
+
+```js
+import tc from 'thousands-counter';
+
+const default = tc(1580);
+const counter = tc(1580, 2);
+
+console.log('Default: ', default);
+// Default: 1.5k
+
+console.log('Counter: ', counter);
+// Counter: 1.58k
+```
+
+## Usage v1.0.0
+```
 toAbr(number, decimals)
 ```
 
