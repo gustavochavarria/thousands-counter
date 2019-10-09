@@ -3,10 +3,10 @@ const SYMBOL_LIST = ['', 'K', 'M', 'B'];
 /**
  * Convert number into human numbers
  *
- * @param {Float} number
+ * @param {Number} number
  * @param {Int} digits
  */
-const toAbr = (number, digits) => {
+const toAbr = (number, digits = 1) => {
   if (isNaN(number)) {
     return 0;
   }
@@ -26,7 +26,10 @@ const toAbr = (number, digits) => {
     }
   }
 
-  return `${parseFloat(abr * sign).toFixed(digits)}${symbol}`;
+  const res =
+    absNumber < 1000 ? abr * sign : parseFloat(abr * sign).toFixed(digits);
+
+  return `${res}${symbol}`;
 };
 
 export { toAbr as default };

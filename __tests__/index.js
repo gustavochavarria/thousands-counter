@@ -2,11 +2,11 @@ import test from 'ava';
 import tc from '..';
 
 test('shoul be 700', t => {
-  t.is(tc(700, 1), '700.0');
+  t.is(tc(700, 1), '700');
 });
 
 test('should be 1K', t => {
-  const oneK = tc(1000, 1);
+  const oneK = tc(1000);
   t.is(oneK, '1.0K');
 });
 
