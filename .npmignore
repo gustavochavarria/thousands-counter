@@ -1,6 +1,14 @@
-README.md
-CHANGELOG.md
-LICENSE
+# Documentation
+README*
+CHANGELOG*
+LICENSE*
+
+# Tests and innecesaries files
 __tests__
 yarn.lock
 package.json
+
+
+# Configs
+.editorconfig
+.prettierrc
