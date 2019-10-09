@@ -1,23 +1,25 @@
 {
   "name": "thousands-counter",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "convert thousands of number to miles representation (K, M)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "xo --fix",
+    "test": "xo && ava -v"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gustavochavarria/thousands-counter.git"
   },
   "keywords": [
-    "thousands",
+    "counter",
+    "followers",
+    "human",
+    "likes",
     "people",
     "representation",
     "suffix",
-    "counter",
-    "followers",
-    "likes"
+    "thousands"
   ],
   "author": "Gustavo Chavarria",
   "license": "ISC",
@@ -26,7 +28,13 @@
   },
   "homepage": "https://github.com/gustavochavarria/thousands-counter#readme",
   "devDependencies": {
+    "ava": "^2.4.0",
     "xo": "^0.25.3"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
   },
   "xo": {
     "prettier": true,
