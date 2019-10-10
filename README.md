@@ -1,8 +1,11 @@
 # thousands-counter
-Thousand counters it's a package that allows you to convert the number of followers, likes, post and other statistics on social networks (such as Instagram, Facebook, etc.), in abbreviated expressions 👥👍❤️
+<b>Thousands Counter</b> is a package that allows you to convert numbers above the thousands into its abbreviated form.
+
+This package can be useful for social media projects to convert number of followers, likes and posts, as well as other statistical information for site such as Instagram, Facebook, Pinterest etc.👥👍❤️
+
 
 ### For example
-You can convert numbers into abreviated expression like this:
+The numbers will abbreviate in the following way:
 
 
 <table>
