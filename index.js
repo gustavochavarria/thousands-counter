@@ -1,16 +1,24 @@
 const SYMBOL_LIST = ['', 'K', 'M', 'B'];
+const OPTIONS = {
+  digits: 1,
+  uppercase: true,
+}
 
 /**
  * Convert number into human numbers
  *
  * @param {Number} number
- * @param {Int} digits
+ * @param {Object} options
  */
-const toAbr = (number, digits = 1) => {
+const toAbr = (number, options = {}) => {
   if (isNaN(number)) {
     return 0;
   }
 
+  const opt = {
+    ...OPTIONS,
+    ...options
+  }
   const absNumber = Math.abs(number);
   const sign = [0, 1].includes(Math.sign(number)) ? 1 : -1;
 
@@ -22,14 +30,17 @@ const toAbr = (number, digits = 1) => {
 
     if (absNumber >= reference) {
       abr = absNumber / reference;
-      symbol = SYMBOL_LIST[i];
+      symbol = opt.uppercase ? SYMBOL_LIST[i] : SYMBOL_LIST[i].toLowerCase();
     }
   }
 
   const res =
-    absNumber < 1000 ? abr * sign : parseFloat(abr * sign).toFixed(digits);
+    absNumber < 1000 ? abr * sign : parseFloat(abr * sign).toFixed(opt.digits);
 
   return `${res}${symbol}`;
 };
 
-export { toAbr as default };
+export {
+  toAbr as
+  default
+};
