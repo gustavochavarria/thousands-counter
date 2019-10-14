@@ -68,5 +68,16 @@ console.log('Counter: ', tc(1580, {digits: 2, uppercase: false}));
 // Counter: 1.58k
 ```
 
+## Options 
+
+- **digits**: (number) Print the decimal, by default 1
+- **uppercase**: (boolean) Print K, M, B like uppercase, by default  is true.
+
+## Notes:
+
+- Facebook, Twitter and Youtube uses Uppercase. (Ex: 1.5K, 4.5M)
+- Instagram uses Lowercase. (Ex. 1.5k, 4.5m)
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

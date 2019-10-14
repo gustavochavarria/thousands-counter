@@ -1,6 +1,6 @@
 const SYMBOL_LIST = ['', 'K', 'M', 'B'];
 const OPTIONS = {
-  digits: 0,
+  digits: 1,
   uppercase: true
 };
 
@@ -36,8 +36,10 @@ const toAbr = (number, options = {}) => {
     }
   }
 
+  const relevantDecimal = abr - Math.floor(abr);
+
   const res =
-    digits === 0
+    relevantDecimal <= 0 || digits === 0
       ? Math.floor(abr * sign)
       : parseFloat(abr * sign).toFixed(digits);
 

@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2019-10-14
+
+### Added 
+- Support for uppercase/lowercase
+- Better performance when number is lower that 1000.
+
+### Fixed
+- Delete Irelevant decimal 1.0K = 1K
+
+
+### Breaking Change
+- Added object with configuration
+
 ## [1.1.0] - 2019-10-09
 
 ### Added
