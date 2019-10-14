@@ -29,6 +29,14 @@ The numbers will abbreviate in the following way:
     <td>➡️</td>
     <td>1M</td>
   </tr>
+  <tr>
+  <td colspan="3" style="background: #D4EDDA">Now you can use negative numbers</td>
+  <tr>
+    <td>-1,000</td>
+    <td>➡️</td>
+    <td>-1K</td>
+  </tr>
+  </tr>
 </table>
 
 
@@ -42,35 +50,21 @@ npm install thousands-counter
 yarn add thousands-counter
 ```
 
-## Usage v1.1.0
-```
-tc(number, decimalsAllowed)
+## Usage v2.0.0
+```js
+tc(number, {digits: 2, uppercase: false})
 ```
 
 ```js
 import tc from 'thousands-counter';
 
 console.log('Default: ', tc(1580));
-// Default: 1.5K
-
-console.log('Default: ', tc(1580, 0));
 // Default: 1K
 
-console.log('Counter: ', tc(1580, 2));
-// Counter: 1.58K
-```
+console.log('Default: ', tc(1580, {digits: 2}));
+// Default: 1.58K
 
-## Usage v1.0.0
-```
-toAbr(number, decimals)
-```
-
-```js
-import { toAbr } from 'thousands-counter';
-
-const counter = toAbr(1580, 2);
-
-console.log('Counter: ', counter);
+console.log('Counter: ', tc(1580, {digits: 2, uppercase: false}));
 // Counter: 1.58k
 ```
 
