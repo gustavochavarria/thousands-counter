@@ -30,7 +30,7 @@ The numbers will abbreviate in the following way:
     <td>1M</td>
   </tr>
   <tr>
-  <td colspan="3" style="background: #D4EDDA">Now you can use negative numbers</td>
+  <td colspan="3" style="background: #D4EDDA">You can use negative numbers</td>
   <tr>
     <td>-1,000</td>
     <td>➡️</td>
@@ -52,7 +52,8 @@ yarn add thousands-counter
 
 ## Usage v2.0.0
 ```js
-tc(number, {digits: 2, uppercase: false})
+//default config
+tc(number, {digits: 1, uppercase: true})
 ```
 
 ```js
