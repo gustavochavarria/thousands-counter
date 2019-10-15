@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 - Use Microbundle for compress and support UMD, Modules, etc.
+- Now you can use services like unpkg, and use our lib.
+- Example added
 
 ## [2.0.0] - 2019-10-14
 
