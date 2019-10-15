@@ -45,7 +45,7 @@
   "homepage": "https://github.com/gustavochavarria/thousands-counter#readme",
   "devDependencies": {
     "ava": "^2.4.0",
-    "microbundle": "^0.11.0",
+    "microbundle": "^0.12.0-next.6",
     "xo": "^0.25.3"
   },
   "ava": {
