@@ -1,25 +1,41 @@
 {
   "name": "thousands-counter",
-  "version": "2.0.0",
-  "description": "convert thousands of number to miles representation (K, M)",
-  "main": "index.js",
+  "version": "2.1.0",
+  "description": "convert thousands of number to human representation (K, M, B)",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
   "scripts": {
     "lint": "xo --fix",
-    "test": "xo && ava -v"
+    "test": "xo && ava -v",
+    "build": "microbundle --compress",
+    "dev": "microbundle --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gustavochavarria/thousands-counter.git"
   },
   "keywords": [
+    "convert",
+    "count",
     "counter",
+    "facebook",
     "followers",
     "human",
+    "instagram",
+    "likes dislikes",
     "likes",
+    "love angry happy",
     "people",
     "representation",
+    "retweet",
+    "shares",
     "suffix",
-    "thousands"
+    "thousands",
+    "twitter",
+    "views",
+    "youtube"
   ],
   "author": "Gustavo Chavarria",
   "license": "ISC",
@@ -29,6 +45,7 @@
   "homepage": "https://github.com/gustavochavarria/thousands-counter#readme",
   "devDependencies": {
     "ava": "^2.4.0",
+    "microbundle": "^0.11.0",
     "xo": "^0.25.3"
   },
   "ava": {

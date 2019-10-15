@@ -1,0 +1,42 @@
+<! DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Example Thounsands Counter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-sm-12">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Number</span>
+            </div>
+            <input class="form-control" type="number" step="1000" value="1000" id="initNumber" />
+            <div class="input-group-append">
+              <button class="btn btn-primary" onclick="convertNumber()" type="button">Convert Number</button>
+            </div>
+          </div>
+
+          <h2>To Human</h2>
+          <h3 id="abrNumber"></h3>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://unpkg.com/thousands-counter@2.1.0/index.js"></script>
+    <script>
+      function convertNumber() {
+        var number = document.getElementById('initNumber').value;
+
+        document.getElementById('abrNumber').textContent = window.thousandsCounter(number);
+      };
+    </script>
+  </body>
+
+  </html>

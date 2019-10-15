@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2019-10-15
+
+### Added
+- Use Microbundle for compress and support UMD, Modules, etc.
+
 ## [2.0.0] - 2019-10-14
 
 ### Added 
