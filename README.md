@@ -5,7 +5,8 @@ This package can be useful for social media projects to convert number of follow
 
 
 ### For example
-You can test online: 
+You can test online: (https://thousands-counter.netlify.com/)
+
 The numbers will abbreviate in the following way:
 
 <table>
