@@ -1,6 +1,6 @@
 {
   "name": "thousands-counter",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "convert thousands of number to human representation (K, M, B)",
   "source": "src/index.js",
   "main": "dist/index.js",
@@ -45,7 +45,7 @@
   "homepage": "https://github.com/gustavochavarria/thousands-counter#readme",
   "devDependencies": {
     "ava": "^2.4.0",
-    "microbundle": "^0.12.0-next.6",
+    "microbundle": "^0.14.2",
     "xo": "^0.25.3"
   },
   "ava": {

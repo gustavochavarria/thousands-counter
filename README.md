@@ -1,10 +1,14 @@
 # thousands-counter
+
+[![npm version](https://badge.fury.io/js/thousands-counter.svg)](https://badge.fury.io/js/thousands-counter)
+
+
 <b>Thousands Counter</b> is a package that allows you to convert numbers above the thousands into its abbreviated form.
 
-This package can be useful for social media projects to convert number of followers, likes and posts, as well as other statistical information for site such as Instagram, Facebook, Pinterest etc.👥👍❤️
+This package can be useful for statistics or social media projects to convert number of followers, likes and posts, as well as other statistical information for site such as Instagram, Facebook, Pinterest etc.
 
 
-### For example
+### Example
 You can test online: (https://thousands-counter.netlify.com/)
 
 The numbers will abbreviate in the following way:

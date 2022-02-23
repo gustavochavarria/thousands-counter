@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.1] - 2022-02-23
+- Update Microbundle packages.
+- Add npm badge
+
+
 ## [2.1.0] - 2019-10-15
 
 ### Added
