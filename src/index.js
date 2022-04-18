@@ -10,7 +10,7 @@ const OPTIONS = {
  * @param {Number} number
  * @param {Object} options
  */
-const toAbr = (number, options = {}) => {
+export const toAbr = (number, options = {}) => {
   if (isNaN(number)) {
     return 0;
   }
@@ -86,5 +86,3 @@ export const fromAbr = humanNumber => {
 
   return 0;
 };
-
-export default toAbr;
