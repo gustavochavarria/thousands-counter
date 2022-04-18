@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "xo --fix",
     "test": "xo && ava -v",
+    "prepare": "npm run build",
     "build": "microbundle --compress",
     "dev": "microbundle --watch"
   },
