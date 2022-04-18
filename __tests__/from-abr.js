@@ -5,6 +5,10 @@ test('should be 700', t => {
   t.is(fromAbr('700'), 700);
 });
 
+test('should be 4805', t => {
+  t.is(fromAbr('4,805'), 4805);
+});
+
 test('should be 1000', t => {
   const oneK = fromAbr('1K');
   t.is(oneK, 1000);

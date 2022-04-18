@@ -55,7 +55,9 @@ const toAbr = (number, options = {}) => {
 export const fromAbr = humanNumber => {
   const regex = /(-)?([\d|.]+)(b|m|k)?$/i;
 
-  const matches = String(humanNumber).match(regex);
+  const matches = String(humanNumber)
+    .replace(',', '')
+    .match(regex);
   if (matches !== null) {
     const sign = matches[1];
     const value = parseFloat(matches[2]);
