@@ -1,7 +1,7 @@
 import test from 'ava';
-import tc from '..';
+import tc from '../src';
 
-test('shoul be 700', t => {
+test('should be 700', t => {
   t.is(tc('700'), 700);
 });
 
@@ -32,7 +32,7 @@ test('should be 1.5M', t => {
   t.is(oneMillion, '1.5M');
 });
 
-test('should be a -1.24K', t => {
+test('should be -1.24K', t => {
   const oneK = tc(-1240, {
     digits: 2
   });

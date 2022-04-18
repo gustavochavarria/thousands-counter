@@ -46,4 +46,43 @@ const toAbr = (number, options = {}) => {
   return `${res}${symbol}`;
 };
 
+/**
+ * Does the opposite of toAbr, takes human friendly number and converts to float
+ * Returns 0 if not a human friendly number in expected format
+ * @param {Number} number
+ * @param {Object} options
+ */
+export const fromAbr = humanNumber => {
+  const regex = /(-)?([\d|.]+)(b|m|k)?$/i;
+
+  const matches = String(humanNumber).match(regex);
+  if (matches !== null) {
+    const sign = matches[1];
+    const value = parseFloat(matches[2]);
+    const suffix = matches[3];
+    let multiplier = 1;
+    if (suffix) {
+      switch (suffix.toLowerCase()) {
+        case 'k':
+          multiplier = 1000;
+          break;
+        case 'm':
+          multiplier = 1000 ** 2;
+          break;
+        case 'b':
+          multiplier = 1000 ** 3;
+          break;
+        default:
+          multiplier = 1;
+          break;
+      }
+    }
+
+    const num = value * multiplier;
+    return sign ? -Math.abs(num) : num;
+  }
+
+  return 0;
+};
+
 export default toAbr;
